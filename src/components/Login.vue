@@ -50,7 +50,19 @@ export default {
   mounted() {},
   methods: {
     submit() {
-      console.log("aaaaa");
+      // this.$axios
+      //   .post("api/Login/Login", this.form)
+      //   .then((response) => {
+      //     console.log(response);
+      //     debugger;
+      //     sessionStorage.setItem("Authorization", response.data.token);
+      //     this.$router.push(router.currentRoute.fullPath);
+      //   })
+      //   .catch(function (e) {
+      //     console.log(e);
+      //   });
+      sessionStorage.setItem("Authorization", "123456");
+      this.$router.push("/");
     },
   },
 };
@@ -83,7 +95,7 @@ export default {
   top: -350px;
   width: 600px;
   height: 600px;
-  background: #ff359b;
+  background: #474044;
 }
 
 .viewBody .color:nth-child(2) {
@@ -91,7 +103,7 @@ export default {
   left: 100px;
   width: 500px;
   height: 500px;
-  background: #fffd87;
+  background: #87fff5;
 }
 
 .viewBody .color:nth-child(3) {
