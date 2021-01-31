@@ -5,7 +5,9 @@
         <share></share>
       </el-header>
       <el-container>
-        <el-aside width="200px">Aside</el-aside>
+        <el-aside width="200px">
+          <Aside></Aside>
+        </el-aside>
         <el-container>
           <el-main>
             <router-view />
@@ -17,10 +19,12 @@
 </template>
 <script>
 import Share from "./component/Share";
+import Aside from "./component/Aside";
 export default {
   name: "Home",
   components: {
     share: Share,
+    Aside: Aside,
   },
   data() {
     return {};
@@ -35,6 +39,9 @@ export default {
   height: 100%;
   background: #f1f1f1;
 }
+.el-container {
+  overflow: hidden;
+}
 .el-header,
 .el-footer {
   color: #333;
@@ -44,17 +51,20 @@ export default {
 }
 
 .el-aside {
-  background-color: #d3dce6;
+  background-color: #ffffff;
   color: #333;
   text-align: center;
   line-height: 200px;
 }
-
 .el-main {
-  background-color: #ffffff;
   color: #333;
-  height: calc(100%-60px);
-  margin: 30px;
-  padding: 0;
+  height: calc(100%);
+  padding: 30px 0 30px 30px;
+}
+.el-main > div {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  overflow-y: auto;
 }
 </style>

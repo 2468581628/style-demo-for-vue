@@ -1,13 +1,11 @@
 <template>
   <div class="container">
     <!-- javascript:void(0)是js的关键字,可以阻止连接跳转 -->
-    <a href="javascript:void(0);" style="--i: 1">1</a>
-    <a href="javascript:void(0);" style="--i: 2">2</a>
-    <a href="javascript:void(0);" style="--i: 3">3</a>
-    <a href="javascript:void(0);" style="--i: 4">4</a>
-    <a href="javascript:void(0);" style="--i: 5">5</a>
-
-    <a href="javascript:void(0);" style="--i: 5">5</a>
+    <a href="#/" style="--i: 1">个人简介</a>
+    <a href="#/Resume" style="--i: 2">项目经历</a>
+    <a href="javascript:void(0);" style="--i: 3">待定</a>
+    <a href="javascript:void(0);" style="--i: 4">待定</a>
+    <a href="javascript:void(0);" style="--i: 5">待定</a>
   </div>
 </template>
 <script>
@@ -26,11 +24,9 @@ export default {
   justify-content: center;
   align-items: center;
   /* 让子元素垂直排列 */
-  flex-direction: column;
-  /* 宽度占浏览器可视窗口总宽度 高度占浏览器可视区域总高度 */
   width: 100%;
   height: 100%;
-  background-color: #000;
+  flex-direction: column;
 }
 .container a {
   /* 将a这个行内元素转为块级元素不然无法设置宽和高 */

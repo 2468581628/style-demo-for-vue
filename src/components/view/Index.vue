@@ -1,12 +1,13 @@
 <template>
   <div class="viewBody">
-    <Aside></Aside>
+    <div class="title">
+      <img src="../../assets/图片1.png" alt="" srcset="" />
+    </div>
   </div>
 </template>
 <script>
-import Aside from "../component/Aside";
 export default {
-  components: { Aside: Aside },
+  components: {},
   data() {
     return {};
   },
@@ -14,10 +15,11 @@ export default {
   methods: {},
 };
 </script>
-<style  scoped>
+<style lang="less" scoped>
 .viewBody {
-  height: 100%;
-  width: 100%;
-  background: #ffffff;
+  user-select: none;
+  img {
+    width: 50px;
+  }
 }
 </style>
